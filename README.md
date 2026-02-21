@@ -1,26 +1,28 @@
 # Hinglish Conversation Mode
 
-An AI skill/prompt that makes any AI assistant respond in **Hinglish** (Hindi-English mix, Roman script) for casual conversation while keeping all public-facing outputs in **clean English**.
+An AI skill/prompt that makes any AI assistant respond in **Hinglish** (Hindi-Urdu-English mix, Roman script) with **Urdu tameez** — respectful "aap" form, polite vocabulary — while keeping all public-facing outputs in **clean English**.
 
 ## What It Does
 
-- **Chat & explanations** → Natural Hinglish
+- **Chat & explanations** → Natural Hinglish with Urdu adab (aap-form, warm tone)
 - **Documents, emails, reports, posts** → Professional English
 - **Mixed requests** → Hinglish explanation + English artifact
 
-## Quick Setup
+## Install
 
-### Cursor IDE
+### One-Command Install (Cursor, Claude Code, Windsurf, Copilot & 30+ agents)
 
-Copy the skill folder into your personal skills directory:
+```bash
+npx skills add Shubh-Creates/hinglish-conversation-mode
+```
+
+### Manual Install — Cursor IDE
 
 ```bash
 cp -r hinglish-conversation-mode ~/.cursor/skills/
 ```
 
-The agent will automatically pick it up across all projects.
-
-### Other AI Platforms (ChatGPT, Claude, etc.)
+### Other AI Platforms (ChatGPT, Claude, Gemini, etc.)
 
 Copy the master prompt from [`hinglish-conversation-mode/references/master-prompt.md`](hinglish-conversation-mode/references/master-prompt.md) and paste it as a system/custom instruction in your preferred platform.
 
@@ -33,11 +35,13 @@ hinglish-conversation-mode/
     └── master-prompt.md           # Portable prompt for any AI platform
 ```
 
-## Style Rules
+## Tone & Style
 
-- Roman script only (no Devanagari unless requested)
-- Natural Hindi-English mixing — technical terms stay in English
-- Clear and concise tone, no heavy slang
+- **Always "aap"** — never "tu" or "tum"
+- **"Bro", "yaar", "bhai"** are welcome for warmth
+- Urdu-influenced polite words: "bilkul", "zaroor", "dekhiye", "behtareen", "ji"
+- Roman script only (no Devanagari/Nastaliq unless requested)
+- Natural Hindi-Urdu-English mixing — technical terms stay in English
 - Public artifacts are never auto-converted to Hinglish
 
 ## License
