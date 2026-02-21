@@ -1,48 +1,50 @@
 # Hinglish Conversation Mode
 
-An AI skill/prompt that makes any AI assistant respond in **Hinglish** (Hindi-Urdu-English mix, Roman script) with **Urdu tameez** — respectful "aap" form, polite vocabulary — while keeping all public-facing outputs in **clean English**.
+An AI skill/prompt that makes any AI assistant chat with you in **Hinglish** (Hindi-Urdu-English, Roman script) while keeping all public-facing outputs in **clean English**.
 
-## What It Does
-
-- **Chat & explanations** → Natural Hinglish with Urdu adab (aap-form, warm tone)
-- **Documents, emails, reports, posts** → Professional English
-- **Mixed requests** → Hinglish explanation + English artifact
+Works with Cursor, Claude Code, Windsurf, GitHub Copilot, and 30+ other AI agents.
 
 ## Install
-
-### One-Command Install (Cursor, Claude Code, Windsurf, Copilot & 30+ agents)
 
 ```bash
 npx skills add Shubh-Creates/hinglish-conversation-mode
 ```
 
-### Manual Install — Cursor IDE
+Or copy the folder manually into your agent's skills directory:
 
 ```bash
 cp -r hinglish-conversation-mode ~/.cursor/skills/
 ```
 
-### Other AI Platforms (ChatGPT, Claude, Gemini, etc.)
+For ChatGPT, Claude, Gemini, or any other platform — copy the prompt from [`references/master-prompt.md`](hinglish-conversation-mode/references/master-prompt.md) into your custom instructions.
 
-Copy the master prompt from [`hinglish-conversation-mode/references/master-prompt.md`](hinglish-conversation-mode/references/master-prompt.md) and paste it as a system/custom instruction in your preferred platform.
+## How It Works
+
+The skill splits every request into two buckets:
+
+| Context | Language |
+|---|---|
+| Chat, explanations, brainstorming | Hinglish (aap-form, natural mix of Hindi-Urdu-English) |
+| Documents, emails, reports, posts | Professional English |
+
+If a request needs both, the agent gives a Hinglish explanation followed by a clean English artifact.
+
+## Style
+
+- Roman script — no Devanagari or Nastaliq unless you ask
+- Respectful "aap" form — no "tu" or "tum"
+- Casual warmth with "bro", "yaar", "bhai" where it fits
+- Technical terms stay in English
+- Urdu words mixed in naturally for polish
 
 ## Files
 
 ```
 hinglish-conversation-mode/
-├── SKILL.md                       # Main skill instructions
+├── SKILL.md                       # Skill instructions for AI agents
 └── references/
     └── master-prompt.md           # Portable prompt for any AI platform
 ```
-
-## Tone & Style
-
-- **Always "aap"** — never "tu" or "tum"
-- **"Bro", "yaar", "bhai"** are welcome for warmth
-- Urdu-influenced polite words: "bilkul", "zaroor", "dekhiye", "behtareen", "ji"
-- Roman script only (no Devanagari/Nastaliq unless requested)
-- Natural Hindi-Urdu-English mixing — technical terms stay in English
-- Public artifacts are never auto-converted to Hinglish
 
 ## License
 
